@@ -3,13 +3,240 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Omar M</title>
+    <title>Omar M | Shopify Developer</title>
   </head>
   <body>
-    <section id="hero">
-      <h1>Omar M.</h1>
-      <p>Projects and testimonials coming soon</p>
+    <header>
+      <a href="#" class="logo">Omar.</a>
+
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About me</a>
+        <a href="#">Latest Projects</a>
+        <a href="#">Contact</a>
+      </nav>
+      <i class="bx bx-menu" id="menu-icon"></i>
+    </header>
+
+    <section class="home">
+      <div class="home-detail">
+        <h1>Omar M.</h1>
+        <h2>
+          I'm a
+          <span style="--i: 1" data-text="Shopify Developer"
+            >Shopify Developer</span
+          >
+          <span style="--i: 2" data-text="Motion Designer"
+            >Motion Designer</span
+          >
+          <span style="--i: 3" data-text="Software Engineer"
+            >Software Engineer</span
+          >
+          <span style="--i: 4" data-text="Polyglot">Polyglot</span>
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
+          dignissimos reiciendis iusto in illo, quaerat ea minus consequuntur,
+          nesciunt quo esse laborum veritatis quasi. Libero numquam nisi nemo ex
+          suscipit.
+        </p>
+        <div class="btn-sci">
+          <div class="sci">
+            <a href=""><i class="bx bxl-linkedin-square"></i></a>
+            <a href=""><i class="bx bxl-github"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-img">
+        <div class="img-box">
+          <div class="img-item">
+            <img
+              src="/9a87b1ba-b13f-4c49-83e9-52a11779aafe_removalai_preview.png"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aboutme">
+      <div class="aboutme-container">
+        <div class="aboutme-box">
+          <h3><span>Why</span> hire me?</h3>
+          <p class="desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            ipsa alias asperiores ipsam animi debitis recusandae soluta ad,
+            laborum voluptates qui in unde delectus inventore dolorem modi atque
+            quisquam a?
+          </p>
+          <button class="aboutme-btn active">What I know</button>
+          <button class="aboutme-btn">What I do</button>
+          <button class="aboutme-btn">What sets me apart</button>
+        </div>
+
+        <div class="aboutme-box">
+          <div class="aboutme-detail skills active">
+            <h2 class="heading">What I <span>know</span></h2>
+            <h3>Frameworks &amp; Libraries</h3>
+            <ul>
+              <li>JavaScript</li>
+              <li>CSS</li>
+              <li>HTML</li>
+              <li>Liquid</li>
+              <li>React</li>
+              <li>Node</li>
+              <li>Rust</li>
+              <li>C++</li>
+              <li>Kotlin</li>
+              <li>MongoDB</li>
+              <li>MySQL</li>
+              <li>Java</li>
+            </ul>
+            <h3>Technologies</h3>
+            <ul>
+              <li>Shopify</li>
+              <li>Figma</li>
+              <li>Adobe PhotoShop</li>
+              <li>Adobe Illustrator</li>
+              <li>After Effects</li>
+              <li>Lottie</li>
+              <li>Sony Vegas Pro</li>
+              <li>Blendr</li>
+            </ul>
+            <h3>Languages</h3>
+            <ul>
+              <li>English</li>
+              <li>Spanish</li>
+              <li>Russian</li>
+              <li>Ukrainian</li>
+              <li>French</li>
+              <li>Romanian</li>
+            </ul>
+          </div>
+
+          <div class="aboutme-detail services">
+            <h2 class="heading">What I <span>do</span></h2>
+            <h3>Shopify Development</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              quae voluptatibus eos! Sunt dolor id incidunt rerum est corporis
+              laboriosam harum dolorem culpa ut? Adipisci sed a odit nesciunt
+              amet.
+            </p>
+            <h3>Web Animations</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia
+              dolor iure aliquid corporis eligendi blanditiis saepe facilis
+              dolore est, et voluptatum non magnam voluptas ab doloremque,
+              voluptates reiciendis quam sit!
+            </p>
+          </div>
+          <div class="aboutme-detail whyme">
+            <h2 class="heading">What sets me <span>apart</span></h2>
+            <p class="desc">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
+              adipisci deleniti quidem est maxime ipsa obcaecati maiores
+              doloremque nemo rem? Ea corporis temporibus aperiam repudiandae!
+              Possimus quae ipsam necessitatibus aliquam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio">
+      <h2 class="heading">Latest <span>Project</span></h2>
+      <div class="portfolio-container">
+        <div class="portfolio-box">
+          <div class="portfolio-detail active">
+            <p class="numb">01</p>
+            <h3>Demo Shopify Store</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+              ducimus nemo totam iste reiciendis. Ipsum numquam tempore dolor
+              earum quae.
+            </p>
+            <div class="tech">
+              <p>Liquid, JavaScript, CSS</p>
+            </div>
+            <div class="live-github">
+              <a href="#"
+                ><i class="bx bxl-github"></i><span>Github Repo</span></a
+              >
+            </div>
+          </div>
+          <div class="portfolio-detail">
+            <p class="numb">02</p>
+            <h3>More to come</h3>
+            <p>Lorem ipsum dolor sit.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <div class="portfolio-carousel">
+            <div class="img-slide">
+              <div class="img-item">
+                <img
+                  src="https://www.skillshare.com/blog/wp-content/uploads/2024/04/skillshare-responsive-web-design-101-1024x574.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="img-item">
+                <img
+                  src="https://www.skillshare.com/blog/wp-content/uploads/2024/04/skillshare-responsive-web-design-101-1024x574.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="navigation">
+            <button class="arrow-left">
+              <i class="bx bx-chevron-left"></i>
+            </button>
+            <button class="arrow-right">
+              <i class="bx bx-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact active">
+      <div class="contact-container">
+        <div class="contact-box">
+          <h2>Let's Work Together</h2>
+          <p class="desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ea
+            voluptatibus dolor? Recusandae velit exercitationem maxime similique
+            suscipit facilis eius!
+          </p>
+          <div class="contact-detail">
+            <i class="bx bx-at"></i>
+            <div class="detail">
+              <p>Email</p>
+              <p>17omar.massaoudi98@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-box">
+          <form action="">
+            <h2 class="heading">Contact <span>Me!</span></h2>
+
+            <div class="field-box">
+              <input type="text" placeholder="Name and/or Company" required />
+              <input type="email" placeholder="Email Address" required />
+              <textarea name="" id="" placeholder="Enquiry"></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
     </section>
 
     <script type="module" src="/src/main.js"></script>
