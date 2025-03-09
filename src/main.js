@@ -19,31 +19,47 @@ navBarlinks.forEach((link) => {
   });
 });
 
-const activePage = () => {
-  navLinks.forEach((link) => {
-    link.classList.remove("active");
-  });
-  sections.forEach((section) => {
-    section.classList.remove("active");
+window.onscroll = () => {
+  sections.forEach((sec) => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 100;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute("id");
+
+    if (top >= offset && top < offset + height) {
+      navBarlinks.forEach((links) => {
+        links.classList.remove("active");
+        document.querySelector(`header nav a[href*=${id}]`).classList.add("active");
+      });
+      sec.classList.add("show-animate");
+    }
   });
 };
+// const activePage = () => {
+//   navLinks.forEach((link) => {
+//     link.classList.remove("active");
+//   });
+//   sections.forEach((section) => {
+//     section.classList.remove("active");
+//   });
+// };
 
-navLinks.forEach((link, idx) => {
-  link.addEventListener("click", () => {
-    activePage();
-    link.classList.add("active");
-    sections[idx].classList.add("active");
-  });
-});
+// navLinks.forEach((link, idx) => {
+//   link.addEventListener("click", () => {
+//     activePage();
+//     link.classList.add("active");
+//     sections[idx].classList.add("active");
+//   });
+// });
 
-logoLink.addEventListener("click", () => {
-  if (!navLinks[0].classList.contains("active")) {
-    activePage();
+// logoLink.addEventListener("click", () => {
+//   if (!navLinks[0].classList.contains("active")) {
+//     activePage();
 
-    navLinks[0].classList.add("active");
-    sections[0].classList.add("active");
-  }
-});
+//     navLinks[0].classList.add("active");
+//     sections[0].classList.add("active");
+//   }
+// });
 
 const aboutmeBtns = document.querySelectorAll(".aboutme-btn");
 
@@ -63,12 +79,8 @@ aboutmeBtns.forEach((btn, idx) => {
   });
 });
 
-const arrowRight = document.querySelector(
-  ".portfolio-box .navigation .arrow-right"
-);
-const arrowLeft = document.querySelector(
-  ".portfolio-box .navigation .arrow-left"
-);
+const arrowRight = document.querySelector(".portfolio-box .navigation .arrow-right");
+const arrowLeft = document.querySelector(".portfolio-box .navigation .arrow-left");
 
 let index = 0;
 
@@ -76,9 +88,7 @@ const activePortfolio = () => {
   const imgSlide = document.querySelector(".portfolio-carousel .img-slide");
   const portfolioDetails = document.querySelectorAll(".portfolio-detail");
 
-  imgSlide.style.transform = `translateX(calc(${index * -100}% - ${
-    index * 2
-  }rem))`;
+  imgSlide.style.transform = `translateX(calc(${index * -100}% - ${index * 2}rem))`;
   portfolioDetails.forEach((detail) => {
     detail.classList.remove("active");
   });

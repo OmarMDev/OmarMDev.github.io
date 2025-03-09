@@ -20,6 +20,7 @@
 
 html {
   font-size: 67%;
+  overflow-x: hidden;
 }
 
 body {
@@ -39,13 +40,19 @@ header {
   z-index: 100;
 }
 #menu-icon {
+  position: relative;
   font-size: 4rem;
   display: none;
 }
 .logo {
+  position: relative;
   font-size: 3rem;
   color: var(--main-color);
   font-weight: bold;
+}
+
+nav {
+  position: relative;
 }
 
 nav a {
@@ -65,44 +72,26 @@ nav a:hover {
 }
 
 section {
-  position: absolute;
+  min-height: 100vh;
   width: 100%;
-  height: 100%;
   padding: 10rem 9% 2rem;
   background: var(--bg-color);
-  visibility: hidden;
-  opacity: 0;
-  overflow: hidden;
-}
-
-section.active {
-  animation: show-content 0.5s ease-out forwards;
-}
-
-@keyframes show-content {
-  100% {
-    visibility: visible;
-    overflow: auto;
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  0% {
-    transform: translateY(-10%);
-  }
 }
 
 .home {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
   gap: 5em;
+  align-items: center;
 }
 
 .home-detail h1 {
+  position: relative;
   font-size: clamp(3.5rem, 10vw, 5.5rem);
 }
 
 .home-detail h2 {
+  position: relative;
   display: inline-block;
   font-size: 3.2rem;
   margin-top: -1rem;
@@ -146,6 +135,7 @@ section.active {
   }
 }
 h2.heading {
+  position: relative;
   font-size: 4.5rem;
   font-weight: 900;
   text-align: center;
@@ -157,13 +147,17 @@ h2.heading span {
 }
 
 .home-detail p {
+  position: relative;
+  display: inline-block;
   font-size: 1.6rem;
   margin: 1rem 0 2.5rem;
 }
 
 .home-detail .btn-sci {
+  position: relative;
   display: flex;
   align-items: center;
+  width: 170px;
 }
 
 .home-detail .btn-sci .sci {
@@ -183,6 +177,10 @@ h2.heading span {
 .home-detail .btn-sci .sci a:hover {
   background: var(--main-color);
   color: var(--bg-color);
+}
+
+.home-img {
+  position: relative;
 }
 
 .home-img .img-box {
@@ -216,6 +214,53 @@ h2.heading span {
   width: 100%;
   height: auto;
   object-fit: cover;
+  opacity: 0;
+}
+
+.aboutme-btn-container {
+  position: relative;
+}
+
+/* 6074.19140625 path0
+  2744.5625 path1
+  7677.3671875 path 2
+*/
+.use-path0 {
+  fill: var(--dark-color);
+  fill-opacity: 0;
+  stroke: var(--dark-color);
+  stroke-dasharray: 2600;
+  stroke-dashoffset: 2600;
+  animation: draw 4s ease forwards;
+}
+.use-path1 {
+  fill: var(--second-color);
+  fill-opacity: 0;
+  stroke: var(--second-color);
+  stroke-dasharray: 480;
+  stroke-dashoffset: 480;
+  animation: draw 4s ease forwards;
+  animation-delay: 1s;
+}
+.use-path2 {
+  fill: var(--main-color);
+  fill-opacity: 0;
+  stroke: var(--main-color);
+  stroke-dasharray: 4350;
+  stroke-dashoffset: 4350;
+  animation: draw 4s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+@keyframes draw {
+  80% {
+    stroke-dashoffset: 0;
+    fill-opacity: 0;
+  }
+
+  100% {
+    fill-opacity: 1;
+  }
 }
 
 .aboutme-container {
@@ -223,7 +268,9 @@ h2.heading span {
   grid-template-columns: 1fr 2fr;
   gap: 5rem;
 }
-
+.aboutme-box {
+  position: relative;
+}
 .aboutme-box h2 {
   font-size: 4.5rem;
 }
@@ -231,6 +278,7 @@ h2.heading span {
   color: var(--main-color);
 }
 .aboutme-box h3 {
+  position: relative;
   font-size: 2.5rem;
 }
 
@@ -239,10 +287,12 @@ h2.heading span {
 }
 
 .aboutme-box .desc {
+  position: relative;
   margin: 2rem 0 2.5rem;
 }
 
 .aboutme-box .aboutme-btn {
+  position: relative;
   width: 100%;
   height: 5rem;
   background-color: var(--second-bg-color);
@@ -304,6 +354,7 @@ h2.heading span {
 }
 
 .portfolio-box .numb {
+  position: relative;
   font-size: 8rem;
   -webkit-text-stroke: 0.07rem var(--dark-color);
   color: transparent;
@@ -311,19 +362,26 @@ h2.heading span {
 }
 
 .portfolio-box h3 {
+  position: relative;
   font-size: 3.5rem;
   margin: 0.8rem 0 2rem;
 }
 
 .portfolio-box p {
+  position: relative;
   font-size: 1.6rem;
 }
 
 .portfolio-box .tech {
+  position: relative;
   margin: 2rem 0;
   color: var(--second-color);
   border-bottom: 0.1rem solid var(--dark-color);
   padding-bottom: 2rem;
+}
+
+.portfolio-box .live-github {
+  position: relative;
 }
 
 .portfolio-box .live-github a {
@@ -392,6 +450,10 @@ h2.heading span {
   border-radius: 1rem;
 }
 
+.portfolio-box {
+  position: relative;
+}
+
 .portfolio-box .navigation {
   text-align: right;
   margin-top: 2rem;
@@ -428,6 +490,7 @@ h2.heading span {
 }
 
 .contact-box h2 {
+  position: relative;
   font-size: 4.5rem;
 }
 
@@ -436,6 +499,7 @@ h2.heading span {
 }
 
 .contact-box .desc {
+  position: relative;
   margin: 1.5rem 0 2.5rem;
 }
 
@@ -443,6 +507,10 @@ h2.heading span {
   display: flex;
   align-items: center;
   margin: 2rem 0;
+}
+
+.contact-detail {
+  position: relative;
 }
 
 .contact-detail i {
@@ -460,6 +528,9 @@ h2.heading span {
   font-weight: bold;
 }
 
+.contact-box {
+  position: relative;
+}
 .contact-box form {
   background: var(--second-bg-color);
   padding: 2.5rem 3.5rem 3.5rem;
@@ -514,6 +585,31 @@ h2.heading span {
   background: var(--bg-color);
   color: var(--second-color);
   box-shadow: none;
+}
+
+.animate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+  background-color: var(--bg-color);
+}
+
+.tech .animate {
+  top: 5px;
+}
+
+.logo .animate,
+.navbar .animate,
+#menu-icon .animate,
+section.home.show-animate .animate,
+section.aboutme.show-animate .animate,
+section.contact.show-animate .animate,
+section.portfolio.show-animate .animate {
+  animation: showRight 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
 }
 
 @media screen and (max-width: 1200px) {
@@ -571,6 +667,7 @@ h2.heading span {
   }
 
   .home {
+    display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     gap: 2rem;
@@ -597,5 +694,11 @@ h2.heading span {
 
   .contact-box .field-box {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@keyframes showRight {
+  100% {
+    width: 0;
   }
 }
