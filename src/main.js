@@ -31,10 +31,27 @@ window.onscroll = () => {
         links.classList.remove("active");
         document.querySelector(`header nav a[href*=${id}]`).classList.add("active");
       });
-      sec.classList.add("show-animate");
     }
   });
 };
+
+const obs = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show-animate");
+      } else {
+        entry.target.classList.remove("show-animate");
+      }
+    });
+  },
+  {
+    threshold: 0.1,
+  }
+);
+
+sections.forEach((el) => obs.observe(el));
+
 // const activePage = () => {
 //   navLinks.forEach((link) => {
 //     link.classList.remove("active");

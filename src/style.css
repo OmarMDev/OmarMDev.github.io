@@ -72,7 +72,7 @@ nav a:hover {
 }
 
 section {
-  min-height: 100vh;
+  min-height: 110vh;
   width: 100%;
   padding: 10rem 9% 2rem;
   background: var(--bg-color);
