@@ -1,5 +1,9 @@
 import "./style.css";
 
+import gsap from "gsap";
+import Swiper from "swiper/bundle";
+import "swiper/css/bundle";
+
 const navLinks = document.querySelectorAll("header nav a");
 const logoLink = document.querySelector(".logo");
 const sections = document.querySelectorAll("section");
@@ -96,46 +100,15 @@ aboutmeBtns.forEach((btn, idx) => {
   });
 });
 
-const arrowRight = document.querySelector(".portfolio-box .navigation .arrow-right");
-const arrowLeft = document.querySelector(".portfolio-box .navigation .arrow-left");
+// let pos = document.querySelector(".img-clip-cursor");
+// const rect = pos.getBoundingClientRect();
 
-let index = 0;
+// document.addEventListener("mousemove", (e) => {
+//   pos.style.setProperty("--x", e.clientX - rect.top + "px");
+//   pos.style.setProperty("--y", e.clientY - rect.left + window.scrollY + "px");
+// });
 
-const activePortfolio = () => {
-  const imgSlide = document.querySelector(".portfolio-carousel .img-slide");
-  const portfolioDetails = document.querySelectorAll(".portfolio-detail");
+// let pos = document.querySelector(".img-clip-cursor");
+// const rect = pos.getBoundingClientRect();
 
-  imgSlide.style.transform = `translateX(calc(${index * -100}% - ${index * 2}rem))`;
-  portfolioDetails.forEach((detail) => {
-    detail.classList.remove("active");
-  });
-  portfolioDetails[index].classList.add("active");
-};
-
-arrowRight.addEventListener("click", () => {
-  if (index < 1) {
-    index++;
-    arrowLeft.classList.remove("disabled");
-    arrowRight.classList.add("disabled");
-
-    // remember to adjust this when adding more templates by deleting the second line above
-  } else {
-    index = 1;
-    arrowRight.classList.add("disabled");
-  }
-
-  activePortfolio();
-});
-
-arrowLeft.addEventListener("click", () => {
-  if (index > 0) {
-    index--;
-    arrowRight.classList.remove("disabled");
-    arrowLeft.classList.add("disabled");
-  } else {
-    index = 0;
-    arrowLeft.classList.add("disabled");
-  }
-
-  activePortfolio();
-});
+// document.addEventListener("mousemo
