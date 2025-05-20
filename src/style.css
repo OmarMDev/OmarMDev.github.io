@@ -208,15 +208,6 @@ h2.heading span {
   overflow: hidden;
 }
 
-.home-img .img-box .img-item img {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  opacity: 0;
-}
-
 .aboutme-btn-container {
   position: relative;
 }
