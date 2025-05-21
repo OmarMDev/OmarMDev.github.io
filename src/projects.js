@@ -5,7 +5,7 @@ const projects = [
     description: "A fully responsive theme was designed for this client based on the Dawn theme. Custom features include a hero section, animated cart progress bar and product page upsell",
     longDescription: "Enhanced tech brand's Shopify store with custom features for a unique, high-converting experience. Implemented dynamic video hero, minimalist nav, immersive landing page, editable sections, custom fonts, pre-ticked upsell, and versatile animated progress bar for shipping & bundles. Aimed for engaging brand presence and increased conversion/average order value.",
     thumbnailSrc: "inscight-thumbnail.png",
-    previewVideoSrc: "/videos/ecommerce-preview.webm",
+    previewVideoSrc: "",
     videoSrc: {
       type: "youtube",
       url: "https://www.youtube.com/embed/pouAW3I3vZc",
@@ -20,7 +20,7 @@ const projects = [
     description: "A fully customized theme that I made for a client. It includes a custom hero section, navbar and product page.",
     longDescription: "A custom theme demonstrating some of the features I made for a client's custom theme. This client needed a custom theme for their store that offered features beyond what it available with the free themes. I have done this by using the free themes as a base, and building on top of that with some custom code to implement custom features as per the client's needs. This included custom blocks and sections, including the flagship landing page.",
     thumbnailSrc: "arbirtat-thumbnail.png",
-    previewVideoSrc: "/videos/ai-generator-preview.webm",
+    previewVideoSrc: "",
     videoSrc: {
       type: "youtube",
       url: "https://www.youtube.com/embed/1TpVVIKO5Vw",
@@ -197,36 +197,4 @@ document.getElementById("project-modal").addEventListener("click", (e) => {
 // Initialize on DOM load
 document.addEventListener("DOMContentLoaded", () => {
   createProjectCards();
-
-  // GSAP animations
-  gsap.from(".section-header", {
-    opacity: 0,
-    y: -50,
-    duration: 1,
-    ease: "power3.out",
-  });
-
-  gsap.from(".project-card", {
-    opacity: 0,
-    y: 30,
-    duration: 0.8,
-    stagger: 0.15,
-    ease: "power3.out",
-    delay: 0.3,
-  });
-
-  // Glow effect follows mouse
-  document.addEventListener("mousemove", (e) => {
-    gsap.to(".glow-1", {
-      x: e.clientX / 8,
-      y: e.clientY / 8,
-      duration: 1.5,
-    });
-
-    gsap.to(".glow-2", {
-      x: -e.clientX / 12,
-      y: -e.clientY / 12,
-      duration: 2,
-    });
-  });
 });
