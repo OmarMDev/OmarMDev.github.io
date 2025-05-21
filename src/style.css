@@ -17,6 +17,7 @@
   --dark-color: #3c4145;
   --disabled-color: #fff3;
   --glow-color: #7352ea9e;
+  --gradient-text: linear-gradient(90deg, var(--main-color), var(--second-color));
 }
 
 html {
@@ -73,41 +74,7 @@ nav a:hover {
 }
 
 section {
-  min-height: 110vh;
-  width: 100%;
-  padding: 10rem 9% 2rem;
-  background: var(--bg-color);
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  border: none;
-  outline: none;
-  text-decoration: none;
-  font-family: "Sarabun", sans-serif;
-}
-:root {
-  --bg-color: #fffeff;
-  --second-bg-color: #f1f0ee;
-  --main-color: #7252ea;
-  --second-color: #d6445b;
-  --dark-color: #3c4145;
-  --disabled-color: #fff3;
-  --gradient-text: linear-gradient(120deg, var(--main-color), var(--second-color));
-}
-
-html {
-  font-size: 67%;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--dark-color);
-}
-
-section {
-  min-height: 110vh;
+  min-height: 100vh;
   width: 100%;
   padding: 10rem 9% 2rem;
   background: var(--bg-color);
@@ -491,7 +458,6 @@ section {
   min-height: 100vh;
   width: 100%;
   padding: 10rem 9% 2rem;
-  background: var(--bg-color);
   position: relative;
   overflow: hidden;
 }
