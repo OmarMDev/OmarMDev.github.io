@@ -56,32 +56,6 @@ const obs = new IntersectionObserver(
 
 sections.forEach((el) => obs.observe(el));
 
-// const activePage = () => {
-//   navLinks.forEach((link) => {
-//     link.classList.remove("active");
-//   });
-//   sections.forEach((section) => {
-//     section.classList.remove("active");
-//   });
-// };
-
-// navLinks.forEach((link, idx) => {
-//   link.addEventListener("click", () => {
-//     activePage();
-//     link.classList.add("active");
-//     sections[idx].classList.add("active");
-//   });
-// });
-
-// logoLink.addEventListener("click", () => {
-//   if (!navLinks[0].classList.contains("active")) {
-//     activePage();
-
-//     navLinks[0].classList.add("active");
-//     sections[0].classList.add("active");
-//   }
-// });
-
 const aboutmeBtns = document.querySelectorAll(".aboutme-btn");
 
 aboutmeBtns.forEach((btn, idx) => {
@@ -99,16 +73,3 @@ aboutmeBtns.forEach((btn, idx) => {
     aboutmeDetails[idx].classList.add("active");
   });
 });
-
-// let pos = document.querySelector(".img-clip-cursor");
-// const rect = pos.getBoundingClientRect();
-
-// document.addEventListener("mousemove", (e) => {
-//   pos.style.setProperty("--x", e.clientX - rect.top + "px");
-//   pos.style.setProperty("--y", e.clientY - rect.left + window.scrollY + "px");
-// });
-
-// let pos = document.querySelector(".img-clip-cursor");
-// const rect = pos.getBoundingClientRect();
-
-// document.addEventListener("mousemo
