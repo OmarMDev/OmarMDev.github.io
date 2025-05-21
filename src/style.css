@@ -129,6 +129,7 @@ section {
 .home-detail::before {
   content: "";
   position: absolute;
+  opacity: 0;
   top: -50%;
   left: -50%;
   width: 200%;
@@ -681,17 +682,6 @@ section {
   z-index: -1;
 }
 
-.glow-1 {
-  top: -20rem;
-  left: -10rem;
-}
-
-.glow-2 {
-  bottom: -30rem;
-  right: -20rem;
-  background: radial-gradient(circle, rgba(214, 68, 91, 0.1) 0%, rgba(214, 68, 91, 0) 70%);
-}
-
 /* Responsive styles */
 @media (max-width: 768px) {
   .projects-grid {
@@ -727,6 +717,7 @@ section {
 .contact-box h2 {
   position: relative;
   font-size: 4.5rem;
+  padding-bottom: 3rem;
 }
 
 .contact-box p {
@@ -1083,6 +1074,7 @@ section {
   left: -20%;
   z-index: 0;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .orbit-circle {
@@ -1123,8 +1115,6 @@ section {
 }
 
 .tech-icon.css {
-  width: 20px; /* Adjust this value to match your desired icon size */
-  height: auto;
   top: 50%;
   right: 10%;
 }
