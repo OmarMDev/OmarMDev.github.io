@@ -810,9 +810,8 @@ section {
 }
 
 .contact-box .btn:hover {
-  background: var(--bg-color);
-  color: var(--second-color);
-  box-shadow: none;
+  box-shadow: 0 0.5rem 1.5rem var(--second-color);
+  transform: translateY(-0.5rem) scale(1.05);
 }
 
 @media screen and (max-width: 1200px) {
