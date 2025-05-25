@@ -418,9 +418,10 @@ section {
   border-radius: 0.6rem;
   margin-bottom: 1rem;
   cursor: pointer;
+  box-shadow: 0 0.2rem 0.5rem #0000001a;
 }
 .aboutme-box .aboutme-btn.active {
-  border-color: var(--main-color);
+  box-shadow: 0 0.2rem 1rem var(--main-color);
   color: var(--main-color);
 }
 
