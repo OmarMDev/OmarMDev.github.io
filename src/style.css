@@ -10,13 +10,12 @@
   font-family: "Sarabun", sans-serif;
 }
 :root {
-  --bg-color: #fffeff;
-  --second-bg-color: #f1f0ee;
-  --main-color: #7252ea;
-  --second-color: #d6445b;
-  --dark-color: #3c4145;
-  --disabled-color: #fff3;
-  --glow-color: #7352ea9e;
+  --bg-color: rgb(255, 254, 255);
+  --second-bg-color: rgb(241, 240, 238);
+  --main-color: rgb(114, 82, 234);
+  --second-color: rgb(214, 68, 91);
+  --dark-color: rgb(60, 65, 69);
+  --disabled-color: rgba(255, 255, 255, 0.2);
   --gradient-text: linear-gradient(90deg, var(--main-color), var(--second-color));
 }
 
@@ -442,13 +441,14 @@ section {
 }
 
 .aboutme-detail ul li {
-  font-size: 1.5rem;
-  padding: 0.3rem 0.5rem;
-  margin: 0.2rem 0.5rem;
-  border: 0.15em solid;
   border-color: var(--second-color);
   color: var(--second-color);
-  border-radius: 10px;
+  margin: 0.2rem 0.4rem;
+  background-color: rgba(214, 68, 91, 0.11);
+  padding: 0.5rem 1.2rem;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 .aboutme-detail p {
