@@ -35,21 +35,33 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2rem 9%;
-  background: var(--bg-color);
+  padding: 1rem 9%;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  &:hover {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.06);
+    transition: all 0.3s ease;
+  }
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0);
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
 }
 #menu-icon {
   position: relative;
-  font-size: 4rem;
+  font-size: 3rem;
   display: none;
 }
 .logo {
   position: relative;
-  font-size: 3rem;
+  font-size: 2.2rem;
   color: var(--main-color);
   font-weight: bold;
 }
@@ -59,10 +71,10 @@ nav {
 }
 
 nav a {
-  font-size: 2em;
+  font-size: 1.6rem;
   color: var(--dark-color);
   font-weight: 500;
-  margin-left: 3.5rem;
+  margin-left: 2.5rem;
   transition: 0.3s;
 }
 
@@ -77,7 +89,7 @@ nav a:hover {
 section {
   min-height: 100vh;
   width: 100%;
-  padding: 10rem 9% 2rem;
+  padding: 8rem 9% 2rem;
   background: var(--bg-color);
   opacity: 0;
   transition: all 1s;
@@ -838,11 +850,11 @@ section.show-animate {
 
 @media screen and (max-width: 992px) {
   header {
-    padding: 2rem 4%;
+    padding: 1rem 4%;
   }
 
   section {
-    padding: 10rem 4% 2rem;
+    padding: 8rem 4% 2rem;
   }
 }
 
@@ -863,9 +875,12 @@ section.show-animate {
     left: 0;
     width: 100%;
     padding: 1rem 0;
-    background: var(--bg-color);
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0.5ren 1rem rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: none;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     text-align: center;
     opacity: 0;
     pointer-events: none;
@@ -881,7 +896,7 @@ section.show-animate {
 
   nav a {
     display: block;
-    margin: 4rem 0;
+    margin: 2rem 0;
   }
 
   .home {
